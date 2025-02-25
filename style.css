@@ -1,0 +1,164 @@
+/* General */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #e0f7fa, #ffffff);
+    text-align: center;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Layout */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.file-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px dashed #007bff;
+    cursor: pointer;
+    width: 300px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.file-upload:hover {
+    background: #e0eaff;
+    border-color: #0056b3;
+}
+
+.file-upload input {
+    display: none;
+}
+
+.file-upload label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.file-upload label:hover {
+    color: #0056b3;
+}
+
+#fileName {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+/* Charts Section */
+.chart-section {
+    width: 60%;
+    min-width: 400px;
+}
+
+/* Chart Cards */
+.charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.chart-card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.chart-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Report Section (Fixed Overlap) */
+.report-section {
+    width: 35%;
+    min-width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+    height: auto;
+}
+
+/* Table */
+#reportTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#reportTable th, #reportTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Button */
+button {
+    padding: 10px 16px;
+    font-size: 14px;
+    background: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    color: white;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 12px;
+}
+
+/* Mobile Friendly */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .chart-section {
+        width: 100%;
+    }
+
+    .charts {
+        grid-template-columns: 1fr;
+    }
+
+    .report-section {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
